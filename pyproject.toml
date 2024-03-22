@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "fastapi-lecture"
+version = "0.1.0"
+description = ""
+authors = ["Vladislav B <rolmf85@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydentic = "^0.0.1.dev3"
+uvicorn = "^0.29.0"
+alembic = "^1.13.1"
+sqlalchemy = "^2.0.28"
+asyncpg = "^0.29.0"
+fastapi = "0.104.1"
+pydantic = {extras = ["email"], version = "^2.6.4"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -5,8 +5,7 @@ load_dotenv()
 
 
 class Config:
-    DB_URL = os.getenv("DB_URL")
+    DB_URL = os.getenv("DB_URL")  # Test
 
 
 config = Config
-

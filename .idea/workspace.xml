@@ -4,14 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="776c5f7b-6faf-4a9b-a070-977b91817615" name="Changes" comment="To be submitted for inspection">
-      <change afterPath="$PROJECT_DIR$/migrations/versions/190505054e89_your_migration_message_here.py" afterDir="false" />
+    <list default="true" id="776c5f7b-6faf-4a9b-a070-977b91817615" name="Changes" comment="Test gitignore">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generator_key.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/script.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/08e392ad41e8_add_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/a01d4f254324_add_user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/conf/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/conf/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/connect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/repository/contacts.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/contacts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schemas/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schemas/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +34,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -42,6 +51,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.config.executor&quot;: &quot;Run&quot;,
     &quot;Python.test_db_query.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -52,7 +62,29 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Shell Script.Start">
+  <component name="RunManager" selected="Python.config">
+    <configuration name="config" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FastAPI_lecture" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/conf" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/conf/config.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test_db_query" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FastAPI_lecture" />
       <option name="ENV_FILES" value="" />
@@ -91,11 +123,13 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.config" />
       <item itemvalue="Python.test_db_query" />
       <item itemvalue="Shell Script.Start" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.config" />
         <item itemvalue="Python.test_db_query" />
       </list>
     </recent_temporary>
@@ -103,7 +137,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-d68999036c7f-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.14475.56" />
+        <option value="bundled-python-sdk-09665e90c3a7-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.15026.15" />
       </set>
     </attachedChunks>
   </component>
@@ -124,12 +158,33 @@
       <option name="project" value="LOCAL" />
       <updated>1711122661665</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Authorisation is add">
+      <option name="closed" value="true" />
+      <created>1711718382258</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711718382258</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Test gitignore">
+      <option name="closed" value="true" />
+      <created>1711719228623</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711719228623</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="To be submitted for inspection" />
-    <option name="LAST_COMMIT_MESSAGE" value="To be submitted for inspection" />
+    <MESSAGE value="Authorisation is add" />
+    <MESSAGE value="Test gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test gitignore" />
   </component>
 </project>

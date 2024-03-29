@@ -1,4 +1,5 @@
 from pydantic import BaseModel, Field, EmailStr
+from uuid import UUID
 
 
 class UserSchema(BaseModel):
@@ -8,7 +9,7 @@ class UserSchema(BaseModel):
 
 
 class UserResponse(BaseModel):
-    id: int = 1
+    id: UUID
     username: str
     email: EmailStr
 

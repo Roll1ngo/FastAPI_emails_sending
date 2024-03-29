@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import timedelta
 
 from sqlalchemy import select, func, or_
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -65,13 +65,13 @@ async def get_birthdays(db: AsyncSession, user: User):
 
 
 async def search_contacts(search_string, db: AsyncSession, user: User):
-    request = select(Contact).filter(
-        or_(
-            Contact.name.ilike(f'%{search_string}%'),
-            Contact.last_name.ilike(f'%{search_string}%'),
-            Contact.email.ilike(f'%{search_string}%'),
-            Contact.phone_number.ilike(f'%{search_string}%')
-        ))
+    request = select(Contact).filter(Contact.user_id == user.id,
+                                     or_(
+                                         Contact.name.ilike(f'%{search_string}%'),
+                                         Contact.last_name.ilike(f'%{search_string}%'),
+                                         Contact.email.ilike(f'%{search_string}%'),
+                                         Contact.phone_number.ilike(f'%{search_string}%')
+                                     ))
     contacts = await db.execute(request)
 
     return contacts.scalars().all()

@@ -1,5 +1,12 @@
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+
 class Config:
-    DB_URL = "postgresql+asyncpg://postgres:bdhw7@localhost:5432/FastAPI_REST_API"
+    DB_URL = os.getenv("DB_URL")
 
 
 config = Config
+

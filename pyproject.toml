@@ -14,6 +14,10 @@ sqlalchemy = "^2.0.28"
 asyncpg = "^0.29.0"
 fastapi = "0.104.1"
 pydantic = {extras = ["email"], version = "^2.6.4"}
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+python-dotenv = "^1.0.1"
+python-multipart = "^0.0.9"
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
 
 
 [build-system]

@@ -1,6 +1,6 @@
 import uuid
 
-from sqlalchemy import String, Date, DateTime, func, ForeignKey
+from sqlalchemy import String, Date, DateTime, func, ForeignKey, Boolean
 from datetime import date
 from sqlalchemy.dialects.postgresql import UUID
 
@@ -31,5 +31,7 @@ class User(Base):
     email: Mapped[str] = mapped_column(String(150), nullable=False, unique=True)
     password: Mapped[str] = mapped_column(String(255), nullable=False)
     refresh_token: Mapped[str] = mapped_column(String(255), nullable=True)
+    email_verified: Mapped[bool] = mapped_column(Boolean, default=False, nullable=True)
+    open_verification_letter: Mapped[bool] = mapped_column(Boolean, default=False, nullable=True)
     created_at: Mapped[date] = mapped_column('created_at', DateTime, default=func.now())
     updated_at: Mapped[date] = mapped_column('updated_at', DateTime, default=func.now(), onupdate=func.now())

@@ -70,3 +70,4 @@ async def search_contacts(search_string: str = Path(min_length=2, max_length=20)
                           user: User = Depends(auth_service.get_current_user)):
     contacts = await repositories_contacts.search_contacts(search_string, db, user)
     return contacts
+

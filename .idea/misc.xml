@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Poetry (FastAPI_lecture)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Poetry (FastAPI_REST_API) (2)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Poetry (FastAPI_emails_sending)" project-jdk-type="Python SDK" />
 </project>

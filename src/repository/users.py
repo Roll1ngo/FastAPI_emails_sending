@@ -2,7 +2,6 @@ from fastapi import Depends
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-
 from src.database.connect import get_db
 from src.entity.models import User
 from src.schemas.user import UserSchema
@@ -21,6 +20,12 @@ async def create_user(body: UserSchema, db: AsyncSession = Depends(get_db)):
     await db.commit()
     await db.refresh(new_user)
     return new_user
+
+
+async def email_verified(email: str, db: AsyncSession) -> None:
+    user = await get_user_by_email(email, db)
+    user.email_verified = True
+    await db.commit()
 
 
 async def update_token(user: User, token, db: AsyncSession):

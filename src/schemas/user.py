@@ -12,6 +12,7 @@ class UserResponse(BaseModel):
     id: UUID
     username: str
     email: EmailStr
+    email_verified: bool | None
 
     class Config:
         from_attributes = True
@@ -21,3 +22,7 @@ class TokenSchema(BaseModel):
     access_token: str
     refresh_token: str
     token_type: str = 'bearer'
+
+
+class RequestEmail(BaseModel):
+    email: EmailStr

@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_DB: FastAPI_REST_API
+      POSTGRES_USER: composepostgre
+      POSTGRES_PASSWORD: bdhw7
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data

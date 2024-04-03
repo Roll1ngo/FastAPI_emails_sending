@@ -1,13 +1,18 @@
 from fastapi import FastAPI, Depends, HTTPException
+from fastapi.staticfiles import StaticFiles
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
+
 import uvicorn
 
 from src.database.connect import get_db
-from src.routes import contacts, auth
+from src.routes import contacts, auth, custom_tasks
 
 app = FastAPI()
 
+app.mount("/static", StaticFiles(directory="src/static"), name="static")
+
+app.include_router(custom_tasks.router, prefix="/rest_api")
 app.include_router(auth.router, prefix="/rest_api")
 app.include_router(contacts.router, prefix="/rest_api")
 
@@ -26,4 +31,4 @@ async def healthchecker(db: AsyncSession = Depends(get_db)):
 
 
 if __name__ == '__main__':
-    uvicorn.run('main:app', host="localhost", port=8002, reload=True)
+    uvicorn.run('main:app', host="localhost", port=8000, reload=True)

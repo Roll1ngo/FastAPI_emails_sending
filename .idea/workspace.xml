@@ -4,20 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="776c5f7b-6faf-4a9b-a070-977b91817615" name="Changes" comment="Test gitignore">
+    <list default="true" id="776c5f7b-6faf-4a9b-a070-977b91817615" name="Changes" comment="Add final edits">
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generator_key.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postgres-data/base/16384/16388" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postgres-data/base/16384/16391" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postgres-data/base/16384/16393" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postgres-data/base/16384/16396" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postgres-data/base/16384/16397" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postgres-data/base/16384/16398" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postgres-data/base/16384/16400" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postgres-data/base/16384/16402" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postgres-data/base/16384/16403" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postgres-data/base/16384/16407" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postgres-data/base/16384/16408" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postgres-data/base/16384/16409" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postgres-data/base/16384/16416" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postgres-data/base/16384/pg_internal.init" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postgres-data/base/5/pg_internal.init" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postgres-data/global/pg_internal.init" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/custom_tasks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/email.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/verify_email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FastAPI_lecture.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FastAPI_lecture.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/poetry.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/poetry.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/08e392ad41e8_add_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/a01d4f254324_add_user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conf/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/conf/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/connect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/a01d4f254324_add_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/db7533cfed60_remove_avatar_field.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/contacts.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/contacts.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/repository/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/users.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schemas/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/contacts.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/contacts.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/schemas/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth.py" afterDir="false" />
     </list>
@@ -30,12 +54,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -51,18 +79,28 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;Python.config.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
     &quot;Python.test_db_query.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Shell Script.Start.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/RollPy/Documents/GitHub/NewThread/FastAPI_synopsis/main.py&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/RollPy/Documents/GitHub/NewThread/FastAPI_emails_sending&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.config">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\RollPy\Documents\GitHub\NewThread\FastAPI_emails_sending" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\RollPy\Documents\GitHub\NewThread\FastAPI_emails_sending\src\services" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.test">
     <configuration name="config" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FastAPI_lecture" />
       <option name="ENV_FILES" value="" />
@@ -77,6 +115,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/conf/config.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FastAPI_lecture" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -123,12 +183,14 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.test" />
       <item itemvalue="Python.config" />
       <item itemvalue="Python.test_db_query" />
       <item itemvalue="Shell Script.Start" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.config" />
         <item itemvalue="Python.test_db_query" />
       </list>
@@ -174,7 +236,23 @@
       <option name="project" value="LOCAL" />
       <updated>1711719228623</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add final edits">
+      <option name="closed" value="true" />
+      <created>1711727282158</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711727282158</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add final edits">
+      <option name="closed" value="true" />
+      <created>1711727313432</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711727313432</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -185,6 +263,7 @@
     <MESSAGE value="To be submitted for inspection" />
     <MESSAGE value="Authorisation is add" />
     <MESSAGE value="Test gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test gitignore" />
+    <MESSAGE value="Add final edits" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add final edits" />
   </component>
 </project>

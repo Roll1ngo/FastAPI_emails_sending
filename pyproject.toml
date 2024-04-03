@@ -1,9 +1,10 @@
 [tool.poetry]
-name = "fastapi-lecture"
+name = "fastapi-emails-sending"
 version = "0.1.0"
 description = ""
 authors = ["Vladislav B <rolmf85@gmail.com>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -18,6 +19,8 @@ python-jose = {extras = ["cryptography"], version = "^3.3.0"}
 python-dotenv = "^1.0.1"
 python-multipart = "^0.0.9"
 passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+fastapi-mail = "^1.4.1"
+redis = "^5.0.3"
 
 
 [build-system]

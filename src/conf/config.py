@@ -16,10 +16,10 @@ class Settings(BaseSettings):
 
     REDIS_DOMAIN: str = 'localhost'
     REDIS_PORT: int = 6379
-    REDIS_PASSWORD: str = None
+    REDIS_PASSWORD: str | None
 
     CLD_NAME: str = "Cloudinary name from https://cloudinary.com/"
-    CLD_API_KEY: int = "Cloudinary api_key from https://cloudinary.com/"
+    CLD_API_KEY: int
     CLD_API_SECRET_KEY: str = "Cloudinary secret_api_key from https://cloudinary.com/"
 
     model_config = ConfigDict(extra='ignore', env_file=".env", env_file_encoding="utf-8")

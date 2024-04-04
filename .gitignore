@@ -1,2 +1,4 @@
 .env
 test
+postgres-data
+generator_key.py

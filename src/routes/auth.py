@@ -1,9 +1,11 @@
 from fastapi import APIRouter, HTTPException, Depends, status, BackgroundTasks, Request, Response
 from fastapi.security import OAuth2PasswordRequestForm, HTTPAuthorizationCredentials, HTTPBearer
+from fastapi.responses import FileResponse, HTMLResponse
+from fastapi.templating import Jinja2Templates
 from sqlalchemy.ext.asyncio import AsyncSession
-from fastapi.responses import FileResponse
 
 from src.database.connect import get_db
+from src.entity.models import User
 from src.repository import users as repositories_users
 from src.repository.users import get_user_by_email
 from src.schemas.user import UserSchema, TokenSchema, UserResponse, RequestEmail
@@ -13,15 +15,17 @@ from src.services.email import send_email
 router = APIRouter(prefix='/auth', tags=['auth'])
 get_refresh_token = HTTPBearer()
 
+templates = Jinja2Templates(directory='templates')
+
 
 @router.post("/signup", response_model=UserResponse, status_code=status.HTTP_201_CREATED)
-async def signup(body: UserSchema, bt: BackgroundTasks, request: Request, db: AsyncSession = Depends(get_db)):
+async def signup(body: UserSchema, background_task: BackgroundTasks, request: Request, db: AsyncSession = Depends(get_db)):
     exist_user = await repositories_users.get_user_by_email(body.email, db)
     if exist_user:
         raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="Account already exists")
     body.password = auth_service.get_password_hash(body.password)
     new_user = await repositories_users.create_user(body, db)
-    bt.add_task(send_email, new_user.email, new_user.username, str(request.base_url))
+    background_task.add_task(send_email, new_user.email, new_user.username, str(request.base_url))
     return new_user
 
 
@@ -42,9 +46,9 @@ async def login(body: OAuth2PasswordRequestForm = Depends(), db: AsyncSession = 
 
 
 @router.get('/refresh_token', response_model=TokenSchema)
-async def refresh_token(credentials: HTTPAuthorizationCredentials = Depends(get_refresh_token),
-                        db: AsyncSession = Depends(get_db)):
-    token = credentials.credentials
+async def refresh_token(input_refresh: str = None, credentials: HTTPAuthorizationCredentials = Depends(get_refresh_token),
+                        db: AsyncSession = Depends(get_db), user: User = Depends(auth_service.get_current_user)):
+    token = input_refresh if input_refresh else credentials.credentials
     email = await auth_service.decode_refresh_token(token)
     user = await repositories_users.get_user_by_email(email, db)
     if user.refresh_token != token:
@@ -57,8 +61,8 @@ async def refresh_token(credentials: HTTPAuthorizationCredentials = Depends(get_
     return {"access_token": access_token, "refresh_token": refresh_token, "token_type": "bearer"}
 
 
-@router.get('/confirmed_email/{token}')
-async def confirmed_email(token: str, db: AsyncSession = Depends(get_db)):
+@router.get('/confirmed_email/{token}', response_class=HTMLResponse)
+async def confirmed_email(token: str, request: Request, db: AsyncSession = Depends(get_db)):
     email = await auth_service.get_email_from_token(token)
     user = await repositories_users.get_user_by_email(email, db)
     if user is None:
@@ -66,7 +70,7 @@ async def confirmed_email(token: str, db: AsyncSession = Depends(get_db)):
     if user.email_verified:
         return {"message": "Your email is already confirmed"}
     await repositories_users.email_verified(email, db)
-    return {"message": "email_confirmed"}
+    return templates.TemplateResponse('response_email_verification.html', context={'request': request})
 
 
 @router.post('/resent_email')

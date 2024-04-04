@@ -1,11 +1,10 @@
 from typing import List
 
-from fastapi import Depends, APIRouter, Request
+from fastapi import Depends, APIRouter
 from sqlalchemy import select
-from pydantic import BaseModel
+
 
 from sqlalchemy.ext.asyncio import AsyncSession
-from typing_extensions import Any
 
 from src.entity.models import User
 from src.database.connect import get_db

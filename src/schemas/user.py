@@ -12,6 +12,7 @@ class UserResponse(BaseModel):
     id: UUID
     username: str
     email: EmailStr
+    avatar: str | None
     email_verified: bool | None
 
     class Config:

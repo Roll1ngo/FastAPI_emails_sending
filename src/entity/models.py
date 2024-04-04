@@ -20,8 +20,10 @@ class Contact(Base):
     email: Mapped[str] = mapped_column(String(50))
     phone_number: Mapped[str] = mapped_column(nullable=False)
     birthday: Mapped[date] = mapped_column(Date, nullable=False)
-    user_id: Mapped[UUID] = mapped_column(UUID(as_uuid=True), ForeignKey('users.id'), nullable=True)
-    user: Mapped['User'] = relationship('User', backref='contacts', lazy='joined')
+    user_id: Mapped[UUID] = mapped_column(UUID(as_uuid=True), ForeignKey('users.id',
+                                                                         ondelete='CASCADE'), nullable=True,)
+    user: Mapped['User'] = relationship('User', backref='contacts',
+                                        lazy='joined', cascade='all, delete')
 
 
 class User(Base):
@@ -30,6 +32,7 @@ class User(Base):
     username: Mapped[str] = mapped_column(String(50))
     email: Mapped[str] = mapped_column(String(150), nullable=False, unique=True)
     password: Mapped[str] = mapped_column(String(255), nullable=False)
+    avatar: Mapped[str] = mapped_column(String(255), nullable=True)
     refresh_token: Mapped[str] = mapped_column(String(255), nullable=True)
     email_verified: Mapped[bool] = mapped_column(Boolean, default=False, nullable=True)
     open_verification_letter: Mapped[bool] = mapped_column(Boolean, default=False, nullable=True)

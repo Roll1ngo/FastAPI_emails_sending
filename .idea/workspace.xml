@@ -1447,8 +1447,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.test" />
       <item itemvalue="Python.config" />
+      <item itemvalue="Python.test" />
       <item itemvalue="Python.test_db_query" />
       <item itemvalue="Shell Script.Start" />
     </list>
